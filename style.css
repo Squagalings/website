@@ -163,3 +163,64 @@ body:active {
     /* Increased from 15000px to allow for deeper travel */
     width: 1px;
 }
+
+/* --- POKEDEX PAGE STYLING --- */
+.pokedex-wrapper {
+    padding-top: 120px;
+    /* Pushes content down so it isn't hidden behind the fixed nav bar */
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+    /* Ensures it sits above the starry background */
+}
+
+.pokedex-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(0, 150, 255, 0.8);
+    margin-bottom: 40px;
+}
+
+/* --- POKEDEX PAGE STYLING --- */
+.pokedex-wrapper {
+    padding-top: 120px;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+.pokedex-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(0, 150, 255, 0.8);
+    margin-bottom: 40px;
+}
+
+/* New styling for the text wall Datapad */
+.text-wall {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 150, 255, 0.3);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0, 150, 255, 0.1), inset 0 0 20px rgba(0, 150, 255, 0.05);
+    backdrop-filter: blur(10px);
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.text-wall p {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.text-wall p:last-child {
+    margin-bottom: 0;
+}
