@@ -1,0 +1,165 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    cursor: grab;
+}
+
+body:active {
+    cursor: grabbing;
+}
+
+/* --- TOP NAVIGATION BAR --- */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.top-nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0096ff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 150, 255, 0.8);
+}
+
+.top-nav nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.top-nav nav a:hover {
+    color: #0096ff;
+    text-shadow: 0 0 10px rgba(0, 150, 255, 0.8);
+}
+
+/* --- INFINITE REPEATING STARS --- */
+.stars {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('background.png') repeat;
+    background-size: 2500px auto;
+    z-index: -1;
+}
+
+/* --- 3D ENVIRONMENT --- */
+.viewport {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px;
+    /* Gives the 3D depth */
+}
+
+.camera {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+/* --- POKEBALL STYLING --- */
+
+/* --- POKEBALL STYLING --- */
+.planet {
+    position: absolute;
+    /* This is the most crucial line! It detaches them from the page structure */
+    top: 50%;
+    left: 50%;
+
+    /* These negative margins pull a 150px object perfectly into the crosshairs */
+    margin-top: -75px;
+    margin-left: -75px;
+
+    width: 150px;
+    height: 150px;
+    transition: opacity 0.2s ease;
+    transform-style: preserve-3d;
+}
+
+.planet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    /* Clean white glow */
+}
+
+.title-container {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Applies the uppercase sci-fi font to all titles and subtitles */
+.title-container h1,
+.title-container p,
+.title-container h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(0, 150, 255, 0.8);
+}
+
+.title-container h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.title-container p,
+.title-container h2 {
+    font-size: 1.5rem;
+    /* Makes the subtitle a nice readable size */
+}
+
+#auto-scroll-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 30px;
+    background: rgba(0, 150, 255, 0.2);
+    color: white;
+    border: 1px solid #0096ff;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 50;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+#auto-scroll-btn:hover,
+#auto-scroll-btn.active {
+    background: #0096ff;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.6);
+}
+
+.scroll-track {
+    height: 30000px;
+    /* Increased from 15000px to allow for deeper travel */
+    width: 1px;
+}

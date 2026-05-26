@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Parallax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-nav">
+        <div class="logo">Poké-Verse</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Pokédex</a>
+            <a href="#">Missions</a>
+        </nav>
+    </header>
+
+    <div class="scroll-track"></div>
+
+    <div class="viewport">
+        <div class="stars"></div>
+        <div class="title-container" id="main-title">
+            <h1>Poke-verse Explorer</h1>
+            <p>Scroll down to fly through</p>
+        </div>
+
+        <button id="auto-scroll-btn">Start Autopilot</button>
+
+        <div class="camera" id="camera">
+
+            <div class="planet red" data-z="0">
+                <img src="red1.png" alt="Sun">
+                <h2>Love Ball</h2>
+            </div>
+
+            <div class="planet" data-z="-3000">
+                <img src="blue.png" alt="Mercury">
+                <h2>Dive Ball</h2>
+            </div>
+
+            <div class="planet" data-z="-6000">
+                <img src="red2.png" alt="Venus">
+                <h2>Pokeball</h2>
+            </div>
+
+            <div class="planet" data-z="-9000">
+                <img src="purple.png" alt="Earth">
+                <h2>Great Ball</h2>
+            </div>
+
+            <div class="planet" data-z="-12000">
+                <img src="black.png" alt="Mars">
+                <h2>Ultra Ball</h2>
+            </div>
+
+            <div class="planet jupiter" data-z="-15000">
+                <img src="fast.png" alt="Jupiter">
+                <h2>Fast Ball</h2>
+            </div>
+
+            <div class="planet" data-z="-18000">
+                <img src="lure.png" alt="Saturn">
+                <h2>Lure Ball</h2>
+            </div>
+
+            <div class="planet" data-z="-21000">
+                <img src="master.png" alt="Uranus">
+                <h2>Master Ball</h2>
+            </div>
+
+            <div class="planet" data-z="-24000">
+                <img src="net.png" alt="Neptune">
+                <h2>Net Ball</h2>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
